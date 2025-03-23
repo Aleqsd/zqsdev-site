@@ -1,27 +1,28 @@
 [build]
 publish = "."
 
-# === Redirection du sous-domaine CV ===
+# ✅ CV : ne pas rediriger, juste servir le contenu du dossier /cv
 [[redirects]]
 from = "https://cv.zqsdev.com/*"
 to = "/cv/:splat"
 status = 200
 force = true
 
-# === Redirection du sous-domaine Calendly ===
+# ✅ Calendly : redirection externe
 [[redirects]]
 from = "https://calendly.zqsdev.com/*"
 to = "https://calendly.com/alexandre-zqsdev"
 status = 301
 force = true
 
-# === Redirection du domaine principal vers GitHub ===
+# ✅ Domaine racine → GitHub
 [[redirects]]
 from = "https://zqsdev.com/*"
 to = "https://github.com/aleqsd"
 status = 301
 force = true
 
+# ✅ www. → GitHub aussi
 [[redirects]]
 from = "https://www.zqsdev.com/*"
 to = "https://github.com/aleqsd"
