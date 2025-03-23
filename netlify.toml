@@ -1,23 +1,29 @@
-# Default site = zqsdev.com → GitHub
 [build]
 publish = "."
 
-[[redirects]]
-from = "/*"
-to = "https://github.com/aleqsd"
-status = 301
-force = true
-
-# CV : cv.zqsdev.com
+# === Redirection du sous-domaine CV ===
 [[redirects]]
 from = "https://cv.zqsdev.com/*"
 to = "/cv/:splat"
 status = 200
 force = true
 
-# Calendly : calendly.zqsdev.com
+# === Redirection du sous-domaine Calendly ===
 [[redirects]]
 from = "https://calendly.zqsdev.com/*"
 to = "https://calendly.com/alexandre-zqsdev"
+status = 301
+force = true
+
+# === Redirection du domaine principal vers GitHub ===
+[[redirects]]
+from = "https://zqsdev.com/*"
+to = "https://github.com/aleqsd"
+status = 301
+force = true
+
+[[redirects]]
+from = "https://www.zqsdev.com/*"
+to = "https://github.com/aleqsd"
 status = 301
 force = true
