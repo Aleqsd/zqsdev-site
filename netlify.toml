@@ -1,0 +1,23 @@
+# Default site = zqsdev.com → GitHub
+[build]
+publish = "."
+
+[[redirects]]
+from = "/*"
+to = "https://github.com/aleqsd"
+status = 301
+force = true
+
+# CV : cv.zqsdev.com
+[[redirects]]
+from = "https://cv.zqsdev.com/*"
+to = "/cv/:splat"
+status = 200
+force = true
+
+# Calendly : calendly.zqsdev.com
+[[redirects]]
+from = "https://calendly.zqsdev.com/*"
+to = "https://calendly.com/alexandre-zqsdev"
+status = 301
+force = true
